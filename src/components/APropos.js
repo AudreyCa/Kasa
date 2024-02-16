@@ -18,6 +18,7 @@ const handleSvgClick = () => {
   setIsVisible(!isVisible);
   setSvgState((prevState) => (prevState ===  0 ?  1 :  0));
 }; */
+/* onClick={handleSvgClick} sur les  containerVal*/
 
 function APropos() {
     return <>
@@ -26,7 +27,7 @@ function APropos() {
                 <img src={Back3} alt="paysage de montagne" />
             </div>
             <div className="valeurs">
-                <div className="containerVal" onClick={handleSvgClick}>
+                <div className="containerVal">
                     <p>Fiabilité</p>
                     <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 6.76667C5.73333 6.76667 5.46667 6.63333 5.33333 6.5L0.933333 2.1C0.533333 1.7 0.533333 1.03333 0.933333 0.633333C1.33333 0.233333 2 0.233333 2.4 0.633333L6 4.23333L9.6 0.633333C10 0.233333 10.6667 0.233333 11.0667 0.633333C11.4667 1.03333 11.4667 1.7 11.0667 2.1L6.8 6.36667C6.53333 6.63333 6.26667 6.76667 6 6.76667Z" fill="white" />
@@ -35,7 +36,7 @@ function APropos() {
                 <div className="hiddenValue">
                     <p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes</p>
                 </div>
-                <div className="containerVal" onClick={handleSvgClick}>
+                <div className="containerVal">
                     <p>Respect</p>
                     <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 6.76667C5.73333 6.76667 5.46667 6.63333 5.33333 6.5L0.933333 2.1C0.533333 1.7 0.533333 1.03333 0.933333 0.633333C1.33333 0.233333 2 0.233333 2.4 0.633333L6 4.23333L9.6 0.633333C10 0.233333 10.6667 0.233333 11.0667 0.633333C11.4667 1.03333 11.4667 1.7 11.0667 2.1L6.8 6.36667C6.53333 6.63333 6.26667 6.76667 6 6.76667Z" fill="white" />
@@ -44,7 +45,7 @@ function APropos() {
                 <div className="hiddenValue">
                     <p>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme</p>
                 </div>
-                <div className="containerVal" onClick={handleSvgClick}>
+                <div className="containerVal">
                     <p>Service</p>
                     <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 6.76667C5.73333 6.76667 5.46667 6.63333 5.33333 6.5L0.933333 2.1C0.533333 1.7 0.533333 1.03333 0.933333 0.633333C1.33333 0.233333 2 0.233333 2.4 0.633333L6 4.23333L9.6 0.633333C10 0.233333 10.6667 0.233333 11.0667 0.633333C11.4667 1.03333 11.4667 1.7 11.0667 2.1L6.8 6.36667C6.53333 6.63333 6.26667 6.76667 6 6.76667Z" fill="white" />
@@ -53,7 +54,7 @@ function APropos() {
                 <div className="hiddenValue">
                     <p>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme</p>
                 </div>
-                <div className="containerVal" onClick={handleSvgClick}>
+                <div className="containerVal">
                     <p>Sécurité</p>
                     <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 6.76667C5.73333 6.76667 5.46667 6.63333 5.33333 6.5L0.933333 2.1C0.533333 1.7 0.533333 1.03333 0.933333 0.633333C1.33333 0.233333 2 0.233333 2.4 0.633333L6 4.23333L9.6 0.633333C10 0.233333 10.6667 0.233333 11.0667 0.633333C11.4667 1.03333 11.4667 1.7 11.0667 2.1L6.8 6.36667C6.53333 6.63333 6.26667 6.76667 6 6.76667Z" fill="white" />
