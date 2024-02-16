@@ -1,7 +1,9 @@
+import React from "react";
 import logoKasa from './../assets/logo.svg';
 import logoKasaWhite from './../assets/logo-noiretblanc.png';
 import '../styles/App.scss';
 import { NavLink, Outlet } from 'react-router-dom';
+
 
 function App() {
     return <>
@@ -13,9 +15,9 @@ function App() {
                     <NavLink to="/apropos">A propos</NavLink>
                 </nav>
             </header>
-            <body>
+            <section className="bodyApp">
                 <Outlet />
-            </body>
+            </section>
             <footer>
                 <img src={logoKasaWhite} className="logo-header" alt="logo de Kasa" />
                 <p>© 2020 Kasa. All rights reserved</p>
