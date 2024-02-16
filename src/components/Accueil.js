@@ -1,11 +1,11 @@
-//import logo from '../../logo.svg';
-import '../styles/Accueil.css';
-import './App.css';
+import React from "react";
+import '../styles/Accueil.scss';
 
 function Accueil() {
   return (
-    <div className="Accueil">
-    </div>
+    <>
+    <h1>Hello, voici la page d'accueil !</h1>
+    </>
   );
 }
 

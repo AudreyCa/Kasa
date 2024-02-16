@@ -1,14 +1,27 @@
-import logo from './../assets/logo.svg';
-import '../styles/App.css';
+import logoKasa from './../assets/logo.svg';
+import logoKasaWhite from './../assets/logo-noiretblanc.png';
+import '../styles/App.scss';
+import { NavLink, Outlet } from 'react-router-dom';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo de Kasa" />
-      </header>
-    </div>
-  );
+    return <>
+        <div className="App">
+            <header>
+                <img src={logoKasa} className="logo-header" alt="logo de Kasa" />
+                <nav>
+                    <NavLink to="/">Accueil</NavLink>
+                    <NavLink to="/apropos">A propos</NavLink>
+                </nav>
+            </header>
+            <body>
+                <Outlet />
+            </body>
+            <footer>
+                <img src={logoKasaWhite} className="logo-header" alt="logo de Kasa" />
+                <p>© 2020 Kasa. All rights reserved</p>
+            </footer>
+        </div>
+    </>
 }
 
 export default App;
