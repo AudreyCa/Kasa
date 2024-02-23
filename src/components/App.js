@@ -5,7 +5,7 @@ import '../styles/App.scss';
 import { NavLink, Outlet } from 'react-router-dom';
 
 
-function App() {
+const App = () => {
     return <>
         <div className="App">
             <header>

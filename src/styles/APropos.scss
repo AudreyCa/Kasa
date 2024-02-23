@@ -3,11 +3,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
+    max-width: 1440px;
     height: 100%;
     box-sizing: border-box;
-    padding: .2em 1.8em;
-    margin-bottom: 150px;
+    padding: .2em 2em 150px;
 
     .headerPropos{
         width: calc(100% - .5em);

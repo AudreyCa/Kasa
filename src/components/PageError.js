@@ -2,7 +2,7 @@ import '../styles/PageError.scss';
 import { NavLink } from 'react-router-dom';
 
 
-function PageError() {
+const PageError = () => {
     return <>
         <section className="error">
             <h1>404</h1>

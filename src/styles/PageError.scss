@@ -1,13 +1,13 @@
 .error{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: calc(100vh - 300px);
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
     box-sizing: border-box;
-    padding: .2em 2em;
-    margin-bottom: 150px;
+    padding: 2em;
 
     h1{
         font-size: clamp(5rem, 4.125rem + 4.6667vw, 9.375rem);

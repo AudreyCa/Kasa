@@ -20,7 +20,7 @@ const handleSvgClick = () => {
 }; */
 /* onClick={handleSvgClick} sur les  containerVal*/
 
-function APropos() {
+const APropos = () => {
     return <>
         <section className="containerPropos">
             <div className="headerPropos">
