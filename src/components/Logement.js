@@ -9,6 +9,14 @@ const Logement = ({ data }) => {
     /* Pour afficher les data du projet : */
     const { id } = useParams();
     const location = data.find(loc => loc.id === id);
+    /* Animation caroussel : */
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const nextImage = () => {
+        setCurrentIndex((currentIndex + 1) % location.pictures.length);
+    };
+    const prevImage = () => {
+        setCurrentIndex((currentIndex - 1 + location.pictures.length) % location.pictures.length);
+    };
     /* Pour afficher les tags dynamiquement : */
     const tagLoc = location.tags;
     const tags = tagLoc.map((tag, ind) =>
@@ -16,9 +24,9 @@ const Logement = ({ data }) => {
     /* Pour afficher les équiements les uns en desous des autres : */
     const equipements = location.equipments;
     const equipement = equipements.map((eq, ind) =>
-    <ul key={`${eq}-${ind}`}>
-        <li>{eq}</li>
-    </ul> );
+        <ul key={`${eq}-${ind}`}>
+            <li>{eq}</li>
+        </ul>);
     /* Pour afficher les étoiles de notation : */
     const note = location.rating;
     const [rating] = useState(note);
@@ -41,7 +49,24 @@ const Logement = ({ data }) => {
     return (
         <>
             <section className="containerLogement">
-                <img src={location.cover} alt="Aperçu du logement à louer" className='caroussel' />
+                <div className='caroussel_container'>
+                    {location.pictures.length > 1 ? (
+                        <>
+                            <button className='arrows prevArrow' onClick={prevImage}>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+                                </svg>
+                            </button>
+                            <button className='arrows nextArrow' onClick={nextImage}>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                                </svg>
+                            </button>
+                        </>
+                    ) : null}
+
+                    <img src={location.pictures[currentIndex]} alt="Aperçu du logement à louer" className='cover_logements' />
+                </div>
                 <div className='infos_loc'>
                     <div className='entete_titre'>
                         <h1>{location.title}</h1>
@@ -69,7 +94,7 @@ const Logement = ({ data }) => {
                     </div>
                 </div>
                 <div className='accordeons'>
-                        <Collapse itemsCol={itemsLogement} />
+                    <Collapse itemsCol={itemsLogement} />
                 </div>
             </section>
         </>

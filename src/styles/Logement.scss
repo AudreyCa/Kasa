@@ -9,12 +9,41 @@
     box-sizing: border-box;
     padding: .2em 2em 160px;
 
-    .caroussel{
+    .caroussel_container{
         width: 100%;
-        height: 300px;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 10px;
+        position: relative;
+
+        .arrows{
+            background: none;
+            border: none;
+            cursor: pointer;
+
+            svg{
+                width: 45px;
+                height: 45px;
+                fill: white;
+                filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+            }
+        }
+        .prevArrow{
+            position: absolute; 
+            left: 10px;
+            top: 45%;
+            color:black;
+        }
+        .nextArrow{
+            position: absolute; 
+            right: 10px;
+            top: 45%;
+        }
+
+        .cover_logements{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+        }
     }
 
     .infos_loc{
@@ -123,7 +152,5 @@
                 align-items: center;
             }
         }
-
     }
-
 }
