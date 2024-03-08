@@ -1,0 +1,51 @@
+.blocs_info{
+width: 100%;
+    .bloc_solo{
+        padding: 1%;
+        width: 98%;
+        display: flex;
+        flex-direction: column;
+    
+        .containerVal{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ff6060;
+            border-radius: 5px;
+            margin-bottom: 0;
+            color: white;
+            font-weight: 600;
+            margin: 0;
+        
+            p, svg{
+                padding: 0 20px;
+            }
+        }
+        
+        .hiddenValue{
+            width: 100%;
+            height: auto;
+            background-color: #f6f6f6;
+            border-radius: 0 0 5px 5px;
+            animation: openCollapse .4s ease-in forwards;
+        
+            p{
+                margin: 0;
+                padding: 20px;
+            }
+        }
+    }
+    
+    @keyframes openCollapse {
+        from {
+            height: 0;
+            opacity: 0;
+        }
+        to {
+            height: auto;
+            opacity: 1;
+        }
+    }
+}
