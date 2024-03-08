@@ -16,9 +16,9 @@ const Logement = ({ data }) => {
     /* Pour afficher les équiements les uns en desous des autres : */
     const equipements = location.equipments;
     const equipement = equipements.map((eq, ind) =>
-    <div>
-    <span key={`${eq}-${ind}`}>{eq}</span>
-    </div> );
+    <ul key={`${eq}-${ind}`}>
+        <li>{eq}</li>
+    </ul> );
     /* Pour afficher les étoiles de notation : */
     const note = location.rating;
     const [rating] = useState(note);

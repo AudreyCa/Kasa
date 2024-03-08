@@ -31,9 +31,14 @@ width: 100%;
             border-radius: 0 0 5px 5px;
             animation: openCollapse .4s ease-in forwards;
         
-            p{
+            div{
                 margin: 0;
                 padding: 20px;
+                ul{
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                }
             }
         }
     }
