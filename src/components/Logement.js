@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import '../styles/Logement.scss';
@@ -9,6 +10,10 @@ const Logement = ({ data }) => {
     /* Pour afficher les data du projet : */
     const { id } = useParams();
     const location = data.find(loc => loc.id === id);
+    /* Gère l'erreur sur l'id d'une propriété */
+    if (!location) {
+        return <Navigate to="NotFound" replace />;
+    }
     /* Animation caroussel : */
     const [currentIndex, setCurrentIndex] = useState(0);
     const nextImage = () => {
@@ -41,10 +46,6 @@ const Logement = ({ data }) => {
             contentCol: equipement
         }
     ]
-    /* Gère le fait qu'il y ait une erreur dans les datas */
-    if (!location) {
-        return <Navigate to="NotFound" replace />;
-    }
 
     return (
         <>
@@ -62,6 +63,9 @@ const Logement = ({ data }) => {
                                     <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
                                 </svg>
                             </button>
+                            <div className="image_numerotation">
+                                {currentIndex + 1}/{location.pictures.length}
+                            </div>
                         </>
                     ) : null}
 

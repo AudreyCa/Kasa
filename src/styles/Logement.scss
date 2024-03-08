@@ -28,13 +28,24 @@
         .prevArrow{
             position: absolute; 
             left: 10px;
-            top: 45%;
+            top: 50%;
+            transform: translateY(-50%);
             color:black;
         }
         .nextArrow{
             position: absolute; 
             right: 10px;
-            top: 45%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .image_numerotation{
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
         }
 
         .cover_logements{
