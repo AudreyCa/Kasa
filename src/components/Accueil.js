@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 const Accueil = () => {
 
   const listLoc = data.map((location, index) =>
-    <NavLink to={`/logement/${location.id}`} className="cardLoc" key={`${location}-${index}`}>{location.title}</NavLink>
+    <NavLink to={`/kasa/logement/${location.id}`} className="cardLoc" key={`${location}-${index}`}>{location.title}</NavLink>
   );
 
   return (
