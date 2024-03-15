@@ -11,8 +11,8 @@ const App = () => {
             <header>
                 <img src={logoKasa} className="logo-header" alt="logo de Kasa" />
                 <nav>
-                    <NavLink to="/kasa">Accueil</NavLink>
-                    <NavLink to="/kasa/apropos">A propos</NavLink>
+                    <NavLink to="/">Accueil</NavLink>
+                    <NavLink to="/apropos">A propos</NavLink>
                 </nav>
             </header>
             <section className="bodyApp">

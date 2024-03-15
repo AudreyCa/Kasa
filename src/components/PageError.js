@@ -7,7 +7,7 @@ const PageError = () => {
         <section className="error">
             <h1>404</h1>
             <p>Oups! La page que vous demandez n'existe pas</p>
-            <NavLink to="/kasa" className="backToHome">Retourner sur la page d'accueil</NavLink>
+            <NavLink to="/" className="backToHome">Retourner sur la page d'accueil</NavLink>
         </ section>
     </>
 
