@@ -6,9 +6,15 @@ import { NavLink } from 'react-router-dom';
 
 const Accueil = () => {
 
-  const listLoc = data.map((location, index) =>
-    <NavLink to={`/logement/${location.id}`} className="cardLoc" key={`${location}-${index}`}>{location.title}</NavLink>
-  );
+
+  const listLoc = data.map((location, index) => {
+    return (
+      <NavLink to={`/logement/${location.id}`} className="cardLoc" key={`${location}-${index}`}>
+        <img src={location.cover} alt="cover de la location" />
+        <p>{location.title}</p>
+      </NavLink>
+    )
+  });
 
   return (
     <>
@@ -20,7 +26,7 @@ const Accueil = () => {
         <div className="listeLocation">
           {listLoc}
         </div>
-        
+
       </div>
     </>
   );
