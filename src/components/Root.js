@@ -4,7 +4,7 @@ import Accueil from './Accueil';
 import Logement from './Logement';
 import APropos from './APropos';
 import PageError from './PageError';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import data from './../assets/bdd-projet6.json';
 
 
@@ -16,7 +16,8 @@ const Root = () => {
           <Route path="/kasa" element={<Accueil data={data}/>} />
           <Route path="/kasa/logement/:id" element={<Logement id={data.id} data={data}/>} />
           <Route path="/kasa/apropos" element={<APropos />} />
-          <Route path="*" element={<PageError />} />
+          <Route path='/404' element={<PageError />} />
+          <Route path='*' element={<Navigate replace to='/404'/>} />  
         </Route>
       </Routes>
     </Router>
