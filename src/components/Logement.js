@@ -1,5 +1,4 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import '../styles/Logement.scss';
 import Collapse from './Collapse';
@@ -7,13 +6,14 @@ import Collapse from './Collapse';
 
 const Logement = ({ data }) => {
 
+    /* ScrollToTop */
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     /* Pour afficher les data du projet : */
     const { id } = useParams();
     const location = data.find(loc => loc.id === id);
-    /* Gère l'erreur sur l'id d'une propriété */
-    if (!location) {
-        return <Navigate to="/kasa/404" replace />;
-    }
     /* Animation caroussel : */
     const [currentIndex, setCurrentIndex] = useState(0);
     const nextImage = () => {
@@ -46,6 +46,10 @@ const Logement = ({ data }) => {
             contentCol: equipement
         }
     ]
+    /* Gère l'erreur sur l'id d'une propriété */
+    if (!location) {
+        return <Navigate to="/kasa/404" replace />;
+    }
 
     return (
         <>
