@@ -17,7 +17,7 @@ const Root = () => {
           <Route path="/kasa/logement/:id" element={<Logement id={data.id} data={data}/>} />
           <Route path="/kasa/apropos" element={<APropos />} />
           <Route path='/kasa/404' element={<PageError />} />
-          <Route path='*' element={<Navigate replace to='/kasa/404'/>} />  
+          <Route path='*' element={<Navigate to='/kasa/404' replace />} />  
         </Route>
       </Routes>
     </Router>
