@@ -12,7 +12,7 @@ const Logement = ({ data }) => {
     const location = data.find(loc => loc.id === id);
     /* Gère l'erreur sur l'id d'une propriété */
     if (!location) {
-        return <Navigate to="NotFound" replace />;
+        return <Navigate to="/kasa/404" replace />;
     }
     /* Animation caroussel : */
     const [currentIndex, setCurrentIndex] = useState(0);
