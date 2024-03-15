@@ -12,7 +12,7 @@ const Root = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<App />}>
+        <Route path="/kasa/" element={<App />}>
           <Route path="" element={<Accueil data={data}/>} />
           <Route path="logement/:id" element={<Logement id={data.id} data={data}/>} />
           <Route path="apropos" element={<APropos />} />
