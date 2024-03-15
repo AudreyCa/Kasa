@@ -13,10 +13,10 @@ const Root = () => {
     <Router>
       <Routes>
         <Route path="/kasa/" element={<App />}>
-          <Route path="" element={<Accueil data={data}/>} />
-          <Route path="logement/:id" element={<Logement id={data.id} data={data}/>} />
-          <Route path="apropos" element={<APropos />} />
-          <Route path="*" element={<PageError />} />
+          <Route path="/kasa/" element={<Accueil data={data}/>} />
+          <Route path="kasa/logement/:id" element={<Logement id={data.id} data={data}/>} />
+          <Route path="kasa/apropos" element={<APropos />} />
+          <Route path="/kasa/*" element={<PageError />} />
         </Route>
       </Routes>
     </Router>
