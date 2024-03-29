@@ -1,7 +1,7 @@
 import React from "react";
-import logoKasa from './../assets/logo.svg';
-import logoKasaWhite from './../assets/logo-noiretblanc.png';
-import '../styles/App.scss';
+import './App.scss';
+import logoKasa from '../../assets/logo.svg';
+import logoKasaWhite from '../../assets/logo-noiretblanc.png';
 import { NavLink, Outlet } from 'react-router-dom';
 
 

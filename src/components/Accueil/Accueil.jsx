@@ -1,10 +1,9 @@
-import '../styles/Accueil.scss';
-import data from './../assets/bdd-projet6.json';
-import Background2 from './../assets/Background2.png';
+import './Accueil.scss';
+import BackgroundAcceuil from '../../assets/BackgroundAcceuil.png';
 import { NavLink } from 'react-router-dom';
 
 
-const Accueil = () => {
+const Accueil = ({ data }) => {
 
   const listLoc = data.map((location, index) => {
     return (
@@ -19,7 +18,7 @@ const Accueil = () => {
     <>
       <div className="containerAcc">
         <div className="headerAcc">
-          <img src={Background2} alt="paysage de falaise" />
+          <img src={BackgroundAcceuil} alt="paysage de falaise" />
           <h1>Chez vous, partout et ailleurs</h1>
         </div>
         <div className="listeLocation">

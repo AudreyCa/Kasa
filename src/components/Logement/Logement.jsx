@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
+import './Logement.scss';
+import Collapse from '../Collapse/Collapse';
 import { useState, useEffect } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
-import '../styles/Logement.scss';
-import Collapse from './Collapse';
 
 
 const Logement = ({ data }) => {

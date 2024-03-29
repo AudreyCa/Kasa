@@ -1,6 +1,6 @@
-import '../styles/APropos.scss';
-import Back3 from './../assets/Background3.png';
-import Collapse from './Collapse';
+import './APropos.scss';
+import Collapse from '../Collapse/Collapse';
+import BackgroundAPropos from '../../assets/BackgroundAPropos.png';
 
 
 const APropos = () => {
@@ -28,7 +28,7 @@ const APropos = () => {
     return <>
         <section className="containerPropos">
             <div className="headerPropos">
-                <img src={Back3} alt="paysage de montagne" />
+                <img src={BackgroundAPropos} alt="paysage de montagne" />
             </div>
             <div className="valeurs">
                 <Collapse itemsCol={itemsAPropos} />

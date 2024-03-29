@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import '../styles/Collapse.scss';
+import './Collapse.scss';
 
 const Collapse = ({ itemsCol }) => {
     /* L'animation du contenu du collapse */
