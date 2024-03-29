@@ -15,7 +15,7 @@ const Root = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get("/Data_Kasa.json")
+    axios.get(`${process.env.PUBLIC_URL}/Data_Kasa.json`)
       .then(response => {
         setData(response.data);
       })
